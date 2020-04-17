@@ -1,4 +1,20 @@
-.home {
+.container-home {
+  max-width: 900px;
+  margin: auto;
+
+  .first-content {
+    width: 100%;
+    margin: auto;
+    border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      width: 90%;
+    }
+
+      .image {
+        width: 100%;
+        margin: auto;
+      }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,19 +22,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
-    .text-content {
+   .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 90%;
+        margin: auto;
+      }
     }
 
     .img-content {
-      width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
 
       img {
         border-radius: 10px;
+        @media @mobile {
+          width: 90%
+        }
       }
     }
   }
@@ -26,24 +51,21 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
-
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
-    }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 90%;
+    }
 
     img {
       border-radius: 10px;
+      width: 100%;
+      @media @mobile {
+        width: 97%;
+      }
     }
   }
 
@@ -52,10 +74,37 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+      @media @mobile {
+        flex-direction: column;
+        justify-content: center;
+      }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 80%;
+        justify-content: center;
+        padding-left: 9em;
+      }
     }
+
+    .button {
+
+        &:hover {
+          cursor: pointer;
+          color: black;
+          background: lighten(@button-bg, 30%);
+          }
+
+      .button();
+        width: 100%;
+        border: none;
+        height: 50px;
+        font-size: 2.5em;
+        .border-top-radius(15px;)
+    }
+          
+    
   }
 }// home
